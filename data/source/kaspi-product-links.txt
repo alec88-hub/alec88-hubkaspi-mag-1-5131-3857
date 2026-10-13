@@ -1,0 +1,31 @@
+INFINIE SP — товары сайта и ссылки на Kaspi Магазин
+Магазин: https://kaspi.kz/shop/m/30375738/products
+Дата сверки: 2026-10-11 (все ссылки из проверенных манифестов импорта, страницы отвечают HTTP 200)
+
+1. INFINIE SP Футболка оверсайз женская (сайт ID 37, SKU KASPI-INF-OVERSIZE-BW)
+   — чёрная: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-chernyi-146333810
+   — белая: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-belyi-147729121
+
+2. INFINIE SP Футболка оверсайз мужская (сайт ID 53, SKU KASPI-578207081)
+   — чёрная: https://kaspi.kz/shop/p/futbolka-oversaiz-infinie-sp-odnotonnaja-chjornaja-142917609
+   — белая: https://kaspi.kz/shop/p/futbolka-oversaiz-infinie-sp-odnotonnaja-belaja-143470402
+
+3. INFINIE SP Футболка базовая (сайт ID 70, SKU KASPI-PREMIUM818)
+   — фисташковая: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-svetlo-zelenyi-fistashkovyi-173631835
+   — белая: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-belyi-145241024
+   — чёрная: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-chernyi-149614344
+
+4. INFINIE SP Футболка хлопковая классическая (сайт ID 94, SKU KASPI-COTTON100)
+   — белая: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-belyi-142910179
+   — тёмно-синяя: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-sinii-temno-sinii-142917507
+   — чёрная: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-chernyi-149590738
+   — серо-голубая: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-seryi-goluboi-147976422
+
+5. INFINIE SP Футболка базовая однотонная (сайт ID 123, SKU KASPI-PREMIUM888)
+   — белая: https://kaspi.kz/shop/p/futbolka-infinie-sp-odnotonnyi-belyi-142694272
+
+6. INFINIE SP Футболка песочная (сайт ID 134, SKU KASPI-ROYAL-BEIGE)
+   — песочная: https://kaspi.kz/shop/p/futbolka-infinie-sp-bezhevyi-pesochnyi-155497625
+
+7. INFINIE SP Футболка розовая (сайт ID 147, SKU KASPI-PINK-565399257)
+   — розовая: https://kaspi.kz/shop/p/futbolka-infinie-sp-rozovyi-160269465

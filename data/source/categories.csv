@@ -1,0 +1,7 @@
+﻿key;woo_id;name;slug;parent_slug;description;product_count
+C-misc;15;Misc;misc;;;0
+C-zhenskie;83;Женские;zhenskie;;;3
+C-muzhskie;82;Мужские;muzhskie;;;4
+C-odezhda;20;Одежда;odezhda;;Одежда INFINIE SP;7
+C-futbolki;21;Футболки;futbolki;odezhda;Футболки и лонгсливы;7
+C-%d1%84%d1%83%d1%82%d0%b1%d0%be%d0%bb%d0%ba%d0%b8;17;Футболки;%d1%84%d1%83%d1%82%d0%b1%d0%be%d0%bb%d0%ba%d0%b8;;;0

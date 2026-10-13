@@ -1,0 +1,153 @@
+{
+  "files": [
+    {
+      "file": "categories.csv",
+      "encoding": "UTF-8 BOM",
+      "delimiter": ";",
+      "rows": 6,
+      "columns": [
+        "key",
+        "woo_id",
+        "name",
+        "slug",
+        "parent_slug",
+        "description",
+        "product_count"
+      ]
+    },
+    {
+      "file": "products.csv",
+      "encoding": "UTF-8 BOM",
+      "delimiter": ";",
+      "rows": 7,
+      "columns": [
+        "key",
+        "woo_id",
+        "sku",
+        "name",
+        "slug",
+        "type",
+        "status",
+        "currency",
+        "price_regular",
+        "price_sale",
+        "sale_from",
+        "sale_to",
+        "stock_status",
+        "manage_stock",
+        "stock_quantity",
+        "backorders",
+        "weight",
+        "length",
+        "width",
+        "height",
+        "shipping_class",
+        "categories",
+        "tags",
+        "brands",
+        "attributes",
+        "featured_media_key",
+        "gallery_media_keys",
+        "rating_average",
+        "rating_count",
+        "upsell_keys",
+        "crosssell_keys",
+        "date_created",
+        "date_modified",
+        "short_description",
+        "description"
+      ]
+    },
+    {
+      "file": "reviews.csv",
+      "encoding": "UTF-8 BOM",
+      "delimiter": ";",
+      "rows": 675,
+      "columns": [
+        "key",
+        "product_key",
+        "woo_id",
+        "rating",
+        "author",
+        "date",
+        "title",
+        "pros",
+        "cons",
+        "verified_purchase",
+        "source",
+        "kaspi_review_key",
+        "kaspi_product_code",
+        "kaspi_merchant_code",
+        "kaspi_order_number",
+        "kaspi_base_product_code",
+        "text"
+      ]
+    },
+    {
+      "file": "media-manifest.csv",
+      "encoding": "UTF-8 BOM",
+      "delimiter": ";",
+      "rows": 52,
+      "columns": [
+        "path",
+        "filename",
+        "mime",
+        "bytes",
+        "sha256",
+        "woo_id",
+        "source_url",
+        "used_by",
+        "alt"
+      ]
+    },
+    {
+      "file": "attributes.csv",
+      "encoding": "UTF-8 BOM",
+      "delimiter": ";",
+      "rows": 3,
+      "columns": [
+        "key",
+        "taxonomy",
+        "name",
+        "is_global",
+        "terms"
+      ]
+    },
+    {
+      "file": "variations.csv",
+      "encoding": "UTF-8 BOM",
+      "delimiter": ";",
+      "rows": 64,
+      "columns": [
+        "key",
+        "parent_key",
+        "woo_id",
+        "sku",
+        "status",
+        "attributes",
+        "price_regular",
+        "price_sale",
+        "stock_status",
+        "manage_stock",
+        "stock_quantity",
+        "backorders",
+        "image_media_key",
+        "weight",
+        "length",
+        "width",
+        "height",
+        "date_modified"
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "products": 7,
+  "variants": 64,
+  "images": 52,
+  "reviews": 675,
+  "links": 14,
+  "unmatchedLinks": 0,
+  "missingPhotos": 0,
+  "textReviews": 443
+}

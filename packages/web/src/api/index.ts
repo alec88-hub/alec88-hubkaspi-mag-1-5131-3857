@@ -1,0 +1,12 @@
+import type { RouterClient } from "@orpc/server";
+import { createApp } from "./__core/app";
+import { catalog } from "./routes/catalog";
+import { administration } from "./routes/administration";
+import { importer } from "./routes/importer";
+import { auth } from "./auth";
+export const router = { catalog, administration, importer };
+export type AppRouter = typeof router;
+export type AppRouterClient = RouterClient<AppRouter>;
+const app = createApp(router);
+app.on(["GET", "POST"], "/api/auth/*", (c) => auth.handler(c.req.raw));
+export default app;
