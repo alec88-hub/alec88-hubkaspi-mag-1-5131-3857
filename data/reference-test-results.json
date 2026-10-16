@@ -1,0 +1,173 @@
+{
+  "pages": [
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/catalog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/favorites",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/terms",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/contacts",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/admin",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/catalog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/favorites",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/terms",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/contacts",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/admin",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/catalog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/favorites",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/terms",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/contacts",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/admin",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    }
+  ],
+  "jsErrors": []
+}

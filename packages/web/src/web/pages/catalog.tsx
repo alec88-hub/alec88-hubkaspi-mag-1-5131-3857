@@ -73,9 +73,9 @@ export default function Catalog() {
       </div>
       <div className="catalog-title">
         <div>
-          <span className="eyebrow">INFINIE SP / ESSENTIALS</span>
+          <span className="eyebrow">ВАШ ЦВЕТ, ВАША ПОСАДКА · INFINIE SP</span>
           <h1>{title}</h1>
-          <p>Продуманные вещи для вашей повседневности.</p>
+          <p>Начните с базового. Добавьте свой цвет.</p>
         </div>
         <span className="catalog-count">{ps.length} товаров</span>
       </div>
@@ -111,7 +111,8 @@ export default function Catalog() {
         <div className="filters">
           <label>
             Поиск
-            <input aria-label="Поиск"
+            <input
+              aria-label="Поиск"
               value={q}
               onChange={(e) => update("q", e.target.value)}
               placeholder="Название или артикул"
@@ -137,7 +138,8 @@ export default function Catalog() {
           </label>
           <label>
             Цена от, ₸
-            <input aria-label="Цена от"
+            <input
+              aria-label="Цена от"
               type="number"
               min="0"
               value={min}
@@ -146,7 +148,8 @@ export default function Catalog() {
           </label>
           <label>
             Цена до, ₸
-            <input aria-label="Цена до"
+            <input
+              aria-label="Цена до"
               type="number"
               min="0"
               value={max}

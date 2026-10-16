@@ -9,3 +9,14 @@ Approved: web only, supplied luxury direction, CSV prices confirmed on 2026-10-1
 - [x] Build, browser+server acceptance tests, report and delivery.
 
 Verified API integration, browser public/mobile/admin, S3 upload, production HTTP/SEO and restart persistence. Remaining limitations documented explicitly in README and delivered report. No owner admin provisioned (email not supplied).
+
+# Reference-style redesign — 2026-10-13
+User explicitly requests full website restyle from supplied ref1 ZIP, including logo and copy voice.
+- [x] Inspect exact HTML/CSS/photos/logo and local reference screenshot.
+- [x] Record original source palette/fonts/layout and copy constraints in design.md.
+- [x] Replace home layout; propagate tokens, pills, logo, typography and voice sitewide, including server fallback.
+- [x] Preserve catalog records, functional galleries, IDs and Kaspi links: 41 API assertions passed after restyle.
+- [x] Build/lint; public desktop/mobile regressions; real admin login/edit/direct S3 upload; 24 responsive page checks at 1440/768/390px.
+- [x] Deliver updated website.
+
+Reference settings persisted; previous settings backed up privately. Fixed mobile privacy heading overflow. Browser checks found no broken images or JS errors. README updated; initial technical report is historical and was not redelivered. Catalog remains 7 products / 64 variants / 52 original media / 675 reviews / 14 links.

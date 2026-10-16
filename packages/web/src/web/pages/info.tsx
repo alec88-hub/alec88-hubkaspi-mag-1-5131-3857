@@ -7,7 +7,7 @@ export default function Info() {
   if (isLoading) return <Loading />;
   const s = data?.settings || {};
   const titles: Record<string, string> = {
-    "/about": "Меньше лишнего. Больше вас.",
+    "/about": "Хорошая база. Без лишних деталей.",
     "/privacy": "Конфиденциальность",
     "/terms": "Покупка на Kaspi",
     "/contacts": "Контакты",
@@ -15,8 +15,10 @@ export default function Info() {
   return (
     <main className="info-page">
       <span className="eyebrow">INFINIE SP</span>
-      <h1>{titles[loc] || "Страница не найдена"}</h1>
-      {loc === "/about" && <img src="/images/M025.webp" alt="Базовый гардероб INFINIE SP" />}
+      <h1 className={loc === "/privacy" ? "info-title-long" : undefined}>
+        {titles[loc] || "Страница не найдена"}
+      </h1>
+      {loc === "/about" && <img src="/reference/lifestyle.jpg" alt="Базовый гардероб INFINIE SP" />}
       <p>
         {loc === "/about"
           ? s.about
@@ -40,7 +42,7 @@ export default function Info() {
         </a>
       )}
       <Link href="/catalog" className="button">
-        В коллекцию
+        Найти свою футболку
       </Link>
     </main>
   );

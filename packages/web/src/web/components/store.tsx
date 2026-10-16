@@ -1,3 +1,4 @@
+import { BrandLogo } from "./brand-logo";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Search, ArrowUpRight, Menu, X, Heart, ArrowRight } from "lucide-react";
@@ -67,7 +68,7 @@ export function Header() {
           {menu ? <X size={21} /> : <Menu size={21} />}
         </button>
         <Link href="/" className="wordmark">
-          INFINIE<span>SP</span>
+          <BrandLogo />
         </Link>
         <nav className={menu ? "nav open" : "nav"}>
           <Link href="/catalog" className={loc === "/catalog" ? "active" : ""}>
@@ -117,12 +118,12 @@ export function Footer() {
       <div className="footer-top">
         <div>
           <Link href="/" className="wordmark">
-            INFINIE<span>SP</span>
+            <BrandLogo />
           </Link>
           <p>
-            Меньше лишнего.
+            Хорошая база.
             <br />
-            Больше вас.
+            Без лишних деталей.
           </p>
         </div>
         <div>
@@ -255,7 +256,7 @@ export function SectionTitle({
       </div>
       {link && (
         <Link href={link} className="text-link">
-          Смотреть всё <ArrowUpRight size={18} />
+          Смотреть коллекцию <ArrowUpRight size={18} />
         </Link>
       )}
     </div>

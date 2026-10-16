@@ -84,22 +84,45 @@ export async function seoPage(path: string, origin: string) {
   const head = `<title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonical)}"><meta name="robots" content="${pathname === "/admin" || pathname === "/favorites" || path.includes("?") || status === 404 ? "noindex,follow" : "index,follow"}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:type" content="${p ? "product" : "website"}"><meta property="og:image" content="${esc(origin + (p?.images?.[0]?.url || "/images/M001.webp"))}"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replaceAll("<", "\\u003c")}</script>`;
   const list = c ? products.filter((p: any) => p.categories.includes(c.slug)) : products;
   const body = renderToStaticMarkup(
-    <div style={{ padding: "40px", fontFamily: "Georgia,serif", background: "#f8f7f3" }}>
-      <nav>
-        <a href="/">INFINIE SP</a> · <a href="/catalog">Коллекция</a> ·{" "}
-        <a href="/about">О бренде</a>
-      </nav>
-      <main>
+    <div>
+      <header className="header">
+        <a href="/" className="wordmark">
+          <img
+            className="brand-logo"
+            src="/reference/logo.png"
+            width="58"
+            height="32"
+            alt="Логотип INFINIE SP"
+          />
+          <span className="brand-name">INFINIE SP</span>
+        </a>
+        <nav className="nav">
+          <a href="/catalog">Коллекция</a>
+          <a href="/about">О бренде</a>
+        </nav>
+      </header>
+      <main className="info-page">
         <h1>
           {status === 404
             ? "Страница не найдена"
             : p?.name ||
               c?.name ||
               (pathname === "/"
-                ? "Простота. Вне времени."
+                ? settings.heroTitle?.replaceAll("\n", " ") ||
+                  "Базовые футболки из натурального хлопка"
                 : pathname === "/about"
-                  ? "О бренде INFINIE SP"
-                  : "Коллекция INFINIE SP")}
+                  ? "Хорошая база. Без лишних деталей."
+                  : pathname === "/privacy"
+                    ? "Конфиденциальность"
+                    : pathname === "/terms"
+                      ? "Покупка на Kaspi"
+                      : pathname === "/contacts"
+                        ? "Контакты"
+                        : pathname === "/admin"
+                          ? "Управление каталогом"
+                          : pathname === "/favorites"
+                            ? "Избранное"
+                            : "Коллекция INFINIE SP")}
         </h1>
         {p ? (
           <>
@@ -140,13 +163,18 @@ export async function seoPage(path: string, origin: string) {
           <a href="/catalog">Вернуться в каталог</a>
         ) : (
           <>
-            <p>{c?.description || description}</p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
+            <p>{c?.description || (pathname === "/" ? settings.heroText : description)}</p>
+            <div className="product-grid">
               {list.map((p: any) => (
                 <article key={p.id}>
                   <a href={"/product/" + p.slug}>
-                    <img src={p.images[0]?.thumb || p.images[0]?.url} alt={p.name} width="200" />
-                    <h2>{p.name}</h2>
+                    <img
+                      src={p.images[0]?.thumb || p.images[0]?.url}
+                      alt={p.name}
+                      width="200"
+                      style={{ float: "none", margin: 0 }}
+                    />
+                    <h2 className="product-name">{p.name}</h2>
                   </a>
                   <p>{p.short_description}</p>
                 </article>

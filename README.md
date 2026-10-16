@@ -2,6 +2,14 @@
 
 Managed Bun / Vite / React / Hono / oRPC / Drizzle application. Web catalog only; no cart, payment or checkout. Purchases go to supplied color-specific Kaspi URLs.
 
+## Reference landing restyle
+
+The supplied `ref1` landing now guides the whole storefront and admin: bone/sand backgrounds, Instrument Serif / Georgia headings, Work Sans / system body text, red pill actions, original eagle logo, reference photos and Russian copy voice. Cyrillic uses the intended Georgia/system fallbacks. Home, catalog, category, product, favorites, information, login and admin screens share these styles. Product facts and imported reviews remain source-based; reference tracking scripts, invented reviews and unsupported guarantees were not copied.
+
+Original reference assets are retained in `packages/web/public/reference/`. Previous home styles and database settings are backed up privately in `data/reference-backup/`. The catalog remains 7 products, 64 variants, 52 original product images, 675 reviews and 14 color-specific Kaspi links.
+
+After restyling, lint/build, 41 API integration assertions, storefront gallery/color/menu checks and real admin edit/upload tests passed. An additional 24 page/viewport checks at 1440, 768 and 390px found no horizontal overflow, broken images or JavaScript errors; results are in `data/reference-test-results.json`.
+
 ## Run
 
 ```sh
@@ -35,7 +43,7 @@ python scripts/normalize.py       # local source normalization; attachment paths
 bun --env-file=.env scripts/seed.ts # initial seed, on-conflict-do-nothing
 ```
 
-Initial CSV files are retained privately in `data/source/`; normalized snapshot is `data/catalog.json`; import diagnostics in `data/import-report.json`. CSVs are UTF-8 BOM with semicolon separators. All 52 original images retain filenames in `packages/web/public/images/`, with 600px and 1200px WebP variants. The hero crop is derived from M001, not a new photo. Originals and WebP copies are also stored under `catalog/` in Tigris. Browser image uploads go directly to S3 via scoped presigned PUT, are decoded with sharp, and use durable object keys. Public API refreshes signed GET URLs.
+Initial CSV files are retained privately in `data/source/`; normalized snapshot is `data/catalog.json`; import diagnostics in `data/import-report.json`. CSVs are UTF-8 BOM with semicolon separators. All 52 original images retain filenames in `packages/web/public/images/`, with 600px and 1200px WebP variants. The home hero uses the supplied reference `hero-white.jpg`; product galleries retain their original catalog photos. Originals and WebP copies are also stored under `catalog/` in Tigris. Browser image uploads go directly to S3 via scoped presigned PUT, are decoded with sharp, and use durable object keys. Public API refreshes signed GET URLs.
 
 ## Admin workflow
 
@@ -83,7 +91,7 @@ Production `src/server.ts` renders crawlable React HTML for product/category/cat
 - Fill real contact details and approve legal text; legal drafts are not legal advice.
 - Locale structure is prepared with UTF-8/settings, but Kazakh translations and language switching are not implemented.
 - Admin variant/attribute editing uses JSON editors rather than individual form rows.
-- Logo is a text wordmark; arbitrary logo upload/display, editable home category selection, category nesting visualization/order/image application and draft-specific preview are not fully implemented.
+- The supplied eagle logo is displayed sitewide. Arbitrary replacement logo upload/display, editable home category selection, category nesting visualization/order/image application and draft-specific preview are not fully implemented.
 - Newness is not fabricated. Favorites work locally; recently viewed IDs are saved, but a recently viewed UI section is not displayed.
 - CSV decoder supports UTF-8/BOM, common separators; legacy encodings require conversion to UTF-8. Advanced arbitrary review/variant column mapping is not implemented.
 - Manifest and global attribute imports preserve source records; they do not fully rebuild relationships in an empty database. SKU/slug collision errors are enforced by DB but not all detected in preview. No dry-run diff view or rollback UI.

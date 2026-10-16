@@ -1,3 +1,4 @@
+import { BrandLogo } from "../components/brand-logo";
 import { useState } from "react";
 import { Link } from "wouter";
 import {
@@ -46,7 +47,7 @@ export default function Admin() {
     return (
       <div className="admin-login">
         <Link href="/" className="wordmark">
-          INFINIE<span>SP</span>
+          <BrandLogo />
         </Link>
         <div className="login-box">
           <ShieldCheck size={28} />
@@ -96,7 +97,8 @@ export default function Admin() {
           >
             <label>
               Email
-              <input aria-label="Email"
+              <input
+                aria-label="Email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -106,7 +108,8 @@ export default function Admin() {
             </label>
             <label>
               Пароль
-              <input aria-label="Пароль"
+              <input
+                aria-label="Пароль"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -208,7 +211,7 @@ function AdminPanel() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link href="/" className="wordmark">
-          INFINIE<span>SP</span>
+          <BrandLogo />
         </Link>
         <span className="eyebrow">CATALOG MANAGER</span>
         <nav>
@@ -342,7 +345,8 @@ function AdminPanel() {
         {(tab === "products" || tab === "reviews") && (
           <div className="admin-search">
             <Search size={18} />
-            <input aria-label="Поиск"
+            <input
+              aria-label="Поиск"
               placeholder={
                 tab === "reviews"
                   ? "Автор, текст или ключ товара"
@@ -533,7 +537,8 @@ function AdminPanel() {
                 <Upload size={28} />
                 <b>{busy ? "Обработка…" : "Выберите CSV, ZIP или TXT"}</b>
                 <span>Сначала предпросмотр, затем подтверждение</span>
-                <input aria-label="Выберите файл"
+                <input
+                  aria-label="Выберите файл"
                   type="file"
                   accept=".csv,.zip,.txt"
                   disabled={busy}
@@ -682,7 +687,8 @@ function AdminPanel() {
               ].map(([key, label]) => (
                 <label key={key}>
                   {label}
-                  <input aria-label={label}
+                  <input
+                    aria-label={label}
                     value={content[key] || ""}
                     onChange={(e) => setSettings({ ...content, [key]: e.target.value })}
                   />
@@ -698,7 +704,8 @@ function AdminPanel() {
             ].map(([key, label]) => (
               <label key={key}>
                 {label}
-                <textarea aria-label={label}
+                <textarea
+                  aria-label={label}
                   value={content[key] || ""}
                   onChange={(e) => setSettings({ ...content, [key]: e.target.value })}
                 />
@@ -742,7 +749,8 @@ function AdminPanel() {
                   ].map(([key, label]) => (
                     <label key={key}>
                       {label}
-                      <input aria-label={label}
+                      <input
+                        aria-label={label}
                         required={["name", "sku", "slug"].includes(key)}
                         value={edit[key] || ""}
                         onChange={(e) => setEdit({ ...edit, [key]: e.target.value })}
@@ -762,7 +770,8 @@ function AdminPanel() {
                   </label>
                   <label>
                     Цена, ₸
-                    <input aria-label="Поле"
+                    <input
+                      aria-label="Поле"
                       type="number"
                       min="0"
                       value={edit.price ?? ""}
@@ -773,7 +782,8 @@ function AdminPanel() {
                   </label>
                 </div>
                 <label className="checkbox">
-                  <input aria-label="Рекомендуемый товар"
+                  <input
+                    aria-label="Рекомендуемый товар"
                     type="checkbox"
                     checked={edit.featured}
                     onChange={(e) => setEdit({ ...edit, featured: e.target.checked })}
@@ -784,7 +794,8 @@ function AdminPanel() {
                   <legend>Категории</legend>
                   {data.categories.map((c: any) => (
                     <label className="checkbox" key={c.key}>
-                      <input aria-label={c.name}
+                      <input
+                        aria-label={c.name}
                         type="checkbox"
                         checked={edit.categories.includes(c.slug)}
                         onChange={(e) =>
@@ -802,14 +813,16 @@ function AdminPanel() {
                 </fieldset>
                 <label>
                   Краткое описание
-                  <textarea aria-label="Краткое описание"
+                  <textarea
+                    aria-label="Краткое описание"
                     value={edit.short_description || ""}
                     onChange={(e) => setEdit({ ...edit, short_description: e.target.value })}
                   />
                 </label>
                 <label>
                   Описание
-                  <textarea aria-label="Описание"
+                  <textarea
+                    aria-label="Описание"
                     className="large"
                     value={edit.description || ""}
                     onChange={(e) => setEdit({ ...edit, description: e.target.value })}
@@ -918,7 +931,8 @@ function AdminPanel() {
                 </label>
                 <label>
                   Загрузить фото
-                  <input aria-label="Выберите файл"
+                  <input
+                    aria-label="Выберите файл"
                     type="file"
                     accept="image/jpeg,image/png,image/webp"
                     disabled={busy}
@@ -935,7 +949,8 @@ function AdminPanel() {
                 </label>
                 <label>
                   Характеристики (JSON)
-                  <textarea aria-label="Характеристики JSON"
+                  <textarea
+                    aria-label="Характеристики JSON"
                     defaultValue={JSON.stringify(edit.attributes, null, 2)}
                     onChange={(e) => {
                       try {
@@ -948,7 +963,8 @@ function AdminPanel() {
                 </label>
                 <details>
                   <summary>Варианты: размеры, цены, цвета (JSON)</summary>
-                  <textarea aria-label="Варианты JSON"
+                  <textarea
+                    aria-label="Варианты JSON"
                     className="large"
                     defaultValue={JSON.stringify(edit.variants, null, 2)}
                     onBlur={(e) => {
@@ -1016,7 +1032,8 @@ function AdminPanel() {
               ].map(([key, label]) => (
                 <label key={key}>
                   {label}
-                  <input aria-label={label}
+                  <input
+                    aria-label={label}
                     value={cat[key] || ""}
                     onChange={(e) => setCat({ ...cat, [key]: e.target.value })}
                   />

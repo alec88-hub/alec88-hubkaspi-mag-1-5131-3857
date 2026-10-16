@@ -26,7 +26,7 @@ function Reviews({ id }: { id: string }) {
   return (
     <div className="reviews">
       <div>
-        <span className="eyebrow">ОПЫТ ПОКУПАТЕЛЕЙ</span>
+        <span className="eyebrow">ПОКУПАТЕЛИ УЖЕ НОСЯТ</span>
         <h2>Отзывы</h2>
         <p>
           Отзывы импортированы из Kaspi.
@@ -207,7 +207,7 @@ export default function Product() {
           </div>
           <div className="variant-section">
             <div className="variant-label">
-              Размер <span>Выберите свой</span>
+              Размер <span>Ваша посадка</span>
             </div>
             <div className="size-options">
               {[...new Set(variants.map((v: any) => v.size))].map((s: any) => (
@@ -286,11 +286,7 @@ export default function Product() {
         <Reviews id={p.id} />
       </div>
       <section className="section related">
-        <SectionTitle
-          label="В ТОМ ЖЕ НАСТРОЕНИИ"
-          title="Дополните свою коллекцию"
-          link="/catalog"
-        />
+        <SectionTitle label="ВАШ ЦВЕТ, ВАШ РИТМ" title="Добавьте настроение" link="/catalog" />
         <div className="product-grid">
           {data.products
             .filter(
